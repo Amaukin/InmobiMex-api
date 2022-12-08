@@ -1,0 +1,36 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.body-container, html {
+  position: relative;
+  background-color: #040303;
+  z-index: 2000;
+}
+
+.navbar-colorizer, .card {
+  background-color: #0f0c0c !important;
+}
+
+.index-container {
+  width: calc(99vw + 13px);
+  height: calc(89vh + 3px);
+  margin-top: calc(-7vh - 5px);
+}
+
+.index-title {
+  margin: 34vh 0px;
+}
+
+.index-background-wallpaper {
+  width: 100%;
+  height: calc(100% - 11vh);
+  position: absolute;
+  margin-top: 2px;
+  opacity: 0.2;
+  z-index: -1;
+}

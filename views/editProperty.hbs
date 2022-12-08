@@ -1,0 +1,58 @@
+<div class="nuevo-superheroe-form d-flex flex-row justify-content-center">
+    <form action="http://localhost:3000/propertyApi/" method="post" class="text-center">
+    <div class="d-flex flex-row">
+        <div class="mx-3">
+            <div class="form-group">
+                <label for="title">Título</label>
+                <input type="text" class="form-control" id="title" name="title" value="{{propiedad.title}}" placeholder="Título del inmueble" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Precio</label>
+                <input type="number" class="form-control" id="price" name="price" value="{{propiedad.price}}" placeholder="Precio del inmueble" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Descripción</label>
+                <textarea type="text" class="form-control" id="description" name="description" value="{{propiedad.description}}" placeholder="Descripción del inmueble..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="address">Dirección</label>
+                <input type="text" class="form-control" id="address" name="address" value="{{propiedad.address}}" placeholder="Dirección del inmueble" required>
+            </div>
+            <fieldset>
+                <div>
+                    <label for="leaseType">Renta</label>
+                    <input type="radio" id="leaseType" name="leaseType" value="Renta" checked>
+                </div>
+                <div>
+                    <label for="leaseType">Venta</label>
+                    <input type="radio" id="leaseType" name="leaseType" value="Venta" checked>
+                </div>
+            </fieldset>
+        </div>
+        <div class="mx-3">
+            <div class="form-group">
+                <label for="roomQuantity"># Habitaciones</label>
+                <input type="number" class="form-control" id="roomQuantity" name="roomQuantity" value="{{propiedad.roomQuantity}}" placeholder="# Habitaciones">
+            </div>
+            <div class="form-group">
+                <label for="bathroomQuantity"># Baños</label>
+                <input type="number" class="form-control" id="bathroomQuantity" name="bathroomQuantity" value="{{propiedad.bathroomQuantity}}" placeholder="# Baños">
+            </div>
+            <div class="form-group">
+                <label for="garageQuantity"># Garages</label>
+                <input type="number" class="form-control" id="garageQuantity" name="garageQuantity" value="{{propiedad.garageQuantity}}" placeholder="# Garages">
+            </div>
+            <div class="form-group">
+                <label for="surface">Superficie</label>
+                <input type="text" class="form-control" id="surface" name="surface" value="{{propiedad.surface}}" placeholder="Superficie del inmueble" required>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="isFurnished" name="isFurnished" value="{{propiedad.isFurnished}}">
+                <label for="isFurnished">Amueblado</label>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>

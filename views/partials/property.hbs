@@ -1,0 +1,19 @@
+<div class="col-sm d-flex justify-content-center">
+    <a href="/properties/{{this._id}}">
+        <div class="card border-primary mb-4"
+            style="max-width: 18rem; min-width:18rem">
+            <img class="card-img-top" style="height: 10rem" src="{{this.imagen}}"
+                onerror="this.src='https://img.freepik.com/premium-vector/home-icon-house-symbol-simple-vector-design-logo_231786-5048.jpg?w=2000'">
+            <div {{#ifCond this.alineacion 'HEROE'}} class="card-body text-primary" {{/ifCond}}
+                {{#ifCond this.alineacion 'VILLANO'}} class="card-body text-secondary" {{/ifCond}}
+                {{#ifCond this.alineacion 'ANTIHEROE'}} class="card-body text-warning" {{/ifCond}}>
+                <h5 class="card-title text-center">{{this.nombre}}</h5>
+                <p class="card-subtitle text-xl-right text-light">{{this.alineacion}}</p>
+            </div>
+            <div class="card-footer text-right">
+                <h1>{{this.title}}</h1>
+                <span>{{this.price}}</span>
+            </div>
+        </div>
+    </a>
+</div>

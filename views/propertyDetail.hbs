@@ -1,0 +1,82 @@
+<div class="d-flex flex-column">
+    <div class="display-4 text-center">{{property.title}}</div>
+    <h5 class="text-center mb-5 text-light">{{property.price}}</h5>
+</div>
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col">
+            <img class="card-img-top" src="{{property.imagen}}"
+                onerror="this.src='https://img.freepik.com/premium-vector/home-icon-house-symbol-simple-vector-design-logo_231786-5048.jpg?w=2000'">
+        </div>
+        <div class="col">
+            <div class="row text-right">
+                <span>{{property.leaseType}}</span>
+            </div>
+            <div class="row align-self-center">
+                <span>{{property.description}}</span>
+            </div>
+            <div class="row align-self-center">
+                <span>{{property.address}}</span>
+            </div>
+            <div class="row align-self-center">
+                <span>Habitaciones: {{property.roomQuantity}}</span>
+                <span>Baños: {{property.bathroomQuantity}}</span>
+            </div>
+            <div class="row align-self-center">
+                <span>Garages: {{property.garageQuantity}}</span>
+            </div>
+            <div class="row align-self-center">
+                <span>Superficie: {{property.surface}}</span>
+            </div>
+            <div class="row align-self-center">
+                <span>Servicios: {{property.services}}</span>
+            </div>
+            <div class="row align-self-center">
+                <h2>Contacto</h2> 
+            </div>
+            <div class="row align-self-center">
+                <h4>{{property.owner.name}} {{property.owner.secondName}} {{property.owner.surname}} {{property.owner.secondSurname}}</h4>
+            </div>
+            <div class="row align-self-center">
+                <span>{{property.owner.email}}</span>
+            </div>
+            <div class="row align-self-center">
+                <span>{{property.owner.phone}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="col text-right">
+        <a href="/superheroes/editar-superheroe/{{superheroe._id}}" class="btn btn-primary">Editar</a>
+        <!-- Boton modal -->
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#dialogoConfirmacion">
+            Eliminar
+        </button>
+    
+    </div>
+    
+</div>
+<!-- Modal -->
+<div class="modal fade" id="dialogoConfirmacion" tabindex="-1" role="dialog" aria-labelledby="dialogoConfirmacionLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="dialogoConfirmacionLabel">Eliminar a {{superheroe.nombre}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Estás a punto de eliminar a {{superheroe.nombre}}, <br> ¿Confirmar?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                <form action="http://localhost:3000/api/{{superheroe._id}}?isDelete=true" method="post">
+                    <button id="boton-eliminar" type="submit"
+                        class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

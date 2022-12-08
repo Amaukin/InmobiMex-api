@@ -1,0 +1,8 @@
+<div class="display-4 text-center mb-5">{{title}}</div>
+<div class="container">
+    {{#each propertiesGrid}}
+    <div class="row mb-5">
+        {{> property this}}
+    </div>
+    {{/each}}
+</div>
