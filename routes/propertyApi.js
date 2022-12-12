@@ -87,11 +87,11 @@ router.patch('/:id', async function (req, res, next) {
 
 /* Delete property. */
 router.delete('/:id', async function (req, res, next) {
-  Property.findByIdAndDelete(req.body.id, (err) =>{
+  Property.findByIdAndDelete(req.params.id, (err) =>{
     if (err) {
       res.send(500, ERROR_OCURRED + err);
     } else {
-      res.send(PROPERTY_DELETED);
+      res.json({status: PROPERTY_DELETED});
     }
   })
 });
