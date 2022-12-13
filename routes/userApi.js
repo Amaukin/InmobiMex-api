@@ -99,11 +99,11 @@ router.post('/:id', async function (req, res, next) {
 
 /* Delete user. */
 router.delete('/:id', async function (req, res, next) {
-  User.findByIdAndDelete(req.body.id, (err) =>{
+  User.findByIdAndDelete(req.params.id, (err) =>{
     if (err) {
       res.send(500, ERROR_OCURRED + err);
     } else {
-      res.send(USER_DELETED);
+      res.json({data: 'Deleted user'});
     }
   })
 });
