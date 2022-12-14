@@ -33,7 +33,7 @@ router.post('/', async function (req, res, next) {
   } else {
     req.body = sanitizeProperty(req.body);
     var property = Property({
-      _id: mongoose.Types.ObjectId(),
+      _id: req.body.owner._id,
       address: req.body.address,
       bathroomQuantity: req.body.bathroomQuantity,
       description: req.body.description,

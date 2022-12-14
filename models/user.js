@@ -10,6 +10,11 @@ var UserSchema = Schema({
         required: true,
         index: { unique: true },
     },
+    isAdmin: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
     name: {
         type: String,
         required: true,
